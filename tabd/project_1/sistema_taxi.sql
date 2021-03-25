@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `taxi` (
     `placa` VARCHAR(8) NOT NULL,
     `marca` VARCHAR(32) NOT NULL,
     `modelo` VARCHAR(32) NOT NULL,
-    `ano_fabricacao` DATETIME NOT NULL,
+    `ano_fabricacao` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`placa`)
 )  ENGINE=INNODB;
 
