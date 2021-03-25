@@ -5,14 +5,14 @@
 -- we do receive truncated data, for more
 -- details, checkout following reference:
 -- https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_notes
-SET SESSION sql_notes = 0;
+-- SET SESSION sql_notes = 0;
 
 -- disable MySQL Server logs messages
 -- about statemetns that are unsafe for
 -- statement-based logging, for more detais,
 -- checkout following reference:
 -- https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_warnings
-SET SESSION log_warnings = 0;
+-- SET SESSION log_warnings = 0;
 
 -- create database `sistema_taxi` it not exists
 -- with default char set latin1 and collate
