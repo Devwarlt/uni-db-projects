@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `corrida` (
 CREATE TABLE IF NOT EXISTS `taxi` (
     `placa` VARCHAR(8) NOT NULL,
     `marca` VARCHAR(32) NOT NULL,
-    `modelo` VARCHAR(32) NOT NULL,
+    `modelo` VARCHAR(64) NOT NULL,
     `ano_fabricacao` VARCHAR(4) NOT NULL,
     PRIMARY KEY (`placa`)
 )  ENGINE=INNODB;
