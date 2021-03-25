@@ -62,17 +62,17 @@ CREATE TABLE IF NOT EXISTS `taxi` (
 
 -- alter tables adding constraints for foreign keys declaration
 ALTER TABLE `cliente_particular`
-	ADD CONSTRAINT `clienter_particular_id_cliente_id`
+    ADD CONSTRAINT `clienter_particular_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE;
 ALTER TABLE `cliente_empresa`
-	ADD CONSTRAINT `clienter_empresa_id_cliente_id`
+    ADD CONSTRAINT `clienter_empresa_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE;
 ALTER TABLE `corrida`
-	ADD CONSTRAINT `corrida_id_cliente_id`
+    ADD CONSTRAINT `corrida_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE,
