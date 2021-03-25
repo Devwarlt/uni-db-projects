@@ -47,13 +47,13 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 -- create table `corrida` if not exists
 CREATE TABLE IF NOT EXISTS `corrida` (
     `id` INT NOT NULL,
-    `placa` VARCHAR(7) NOT NULL,
+    `placa` VARCHAR(8) NOT NULL,
     `data_pedido` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
 
 -- create table `taxi` if not exists
 CREATE TABLE IF NOT EXISTS `taxi` (
-    `placa` VARCHAR(7) NOT NULL,
+    `placa` VARCHAR(8) NOT NULL,
     `marca` VARCHAR(32) NOT NULL,
     `modelo` VARCHAR(32) NOT NULL,
     `ano_fabricacao` DATETIME NOT NULL,
