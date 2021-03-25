@@ -26,14 +26,14 @@ USE `sistema_taxi`;
 -- create table `cliente_particular` if not exists
 CREATE TABLE IF NOT EXISTS `cliente_particular` (
     `id` INT NOT NULL,
-    `cpf` VARCHAR(11) NOT NULL,
+    `cpf` VARCHAR(14) NOT NULL,
     PRIMARY KEY (`cpf`)
 )  ENGINE=INNODB;
 
 -- create table `cliente_empresa` if not exists
 CREATE TABLE IF NOT EXISTS `cliente_empresa` (
     `id` INT NOT NULL,
-    `cnpj` VARCHAR(14) NOT NULL,
+    `cnpj` VARCHAR(18) NOT NULL,
     PRIMARY KEY (`cnpj`)
 )  ENGINE=INNODB;
 
@@ -62,17 +62,17 @@ CREATE TABLE IF NOT EXISTS `taxi` (
 
 -- alter tables adding constraints for foreign keys declaration
 ALTER TABLE `cliente_particular`
-    ADD CONSTRAINT `clienter_particular_id_cliente_id`
+	ADD CONSTRAINT `clienter_particular_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE;
 ALTER TABLE `cliente_empresa`
-    ADD CONSTRAINT `clienter_empresa_id_cliente_id`
+	ADD CONSTRAINT `clienter_empresa_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE;
 ALTER TABLE `corrida`
-    ADD CONSTRAINT `corrida_id_cliente_id`
+	ADD CONSTRAINT `corrida_id_cliente_id`
     FOREIGN KEY (`id`)
     REFERENCES `cliente`(`id`)
     ON DELETE CASCADE,
